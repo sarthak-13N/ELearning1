@@ -1,0 +1,23 @@
+.card {
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .form-control {
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+  }
+  
