@@ -1,0 +1,61 @@
+.sidebar {
+    width: 20%;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    border-right: 1px solid #ccc;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .chapter {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .chapter-title {
+    cursor: pointer;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .chapter-title:hover {
+    color: #007bff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 100%;
+  }
+  
+  .chapter:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #555;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f9f9f9;
+  }
+  
