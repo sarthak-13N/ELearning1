@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink,RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import * as QRCode from 'qrcode';
 
 @Component({
   selector: 'app-payment',
   standalone:true,
-  imports:[RouterLink,RouterModule],
+  imports:[RouterLink,RouterModule,CommonModule],
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })

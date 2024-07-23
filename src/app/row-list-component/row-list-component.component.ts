@@ -8,7 +8,6 @@ import { Row } from '../note-display-component/note.model';
 
 @Component({
   selector: 'app-row-list-component',
-  
   standalone: true,
   imports: [CommonModule,RouterLink,RouterModule,NoteDisplayComponent],
   templateUrl: './row-list-component.component.html',
