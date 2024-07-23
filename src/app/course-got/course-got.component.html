@@ -1,0 +1,11 @@
+<div class="course-list">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.imageUrl" alt="{{course.name}}">
+      <h2>{{course.name}}</h2>
+      <p>{{course.description}}</p>
+      
+      <button routerLink="/" >Watch </button>
+    </div>
+  </div>
+
+  

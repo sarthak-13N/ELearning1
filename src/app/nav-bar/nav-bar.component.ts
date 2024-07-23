@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router,RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Add CommonModule to imports
 
 
@@ -12,9 +12,16 @@ import { CommonModule } from '@angular/common'; // Add CommonModule to imports
 })
 export class NavBarComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   onItemClick(courseName: string): void {
+    let randomInt: boolean= true; 
+    if(randomInt == true)
+    {
+      this.router.navigate(['/course']);
+    }else{
+      this.router.navigate(['/login']);
+    }
     console.log(courseName);
   }
 }

@@ -1,0 +1,14 @@
+<div class="payment-container">
+    <h1>Payment Page</h1>
+    <div class="payment-details">
+      <p>Total Amount: $100</p>
+      <p>Scan the QR code below to complete the payment:</p>
+      <div *ngIf="qrCodeDataUrl">
+        <img [src]="qrCodeDataUrl" alt="QR Code">
+      </div>
+    </div>
+    <div class="payment-actions">
+      <button>Confirm Payment</button>
+    </div>
+  </div>
+  

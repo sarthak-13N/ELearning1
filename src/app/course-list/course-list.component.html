@@ -1,0 +1,11 @@
+<div class="course-list">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.imageUrl" alt="{{course.name}}">
+      <h2>{{course.name}}</h2>
+      <p>{{course.description}}</p>
+      <p class="price">${{course.price}}</p>
+      <button routerLink="/payment" >Buy Now</button>
+    </div>
+  </div>
+
+  
