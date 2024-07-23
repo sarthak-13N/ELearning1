@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterModule, Routes } from '@angular/router';
-import { Router } from 'express';
+import { RouterLink, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Add CommonModule to imports
+
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterModule,RouterLink],
+  imports: [CommonModule, RouterModule, RouterLink], 
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css'
+  styleUrls: ['./nav-bar.component.css'] 
 })
 export class NavBarComponent {
 
+  constructor() { }
+
+  onItemClick(courseName: string): void {
+    console.log(courseName);
+  }
 }
