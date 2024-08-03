@@ -1,0 +1,25 @@
+<aside class="sidebar">
+    <h2>Chapters</h2>
+    <div *ngFor="let chapter of chapters" class="chapter">
+      <div class="chapter-title">
+        {{ chapter.title }}
+        <div class="dropdown-content">
+          <a *ngFor="let video of chapter.videos" 
+             (click)="playVideo(video.id, video.notes)" 
+             class="dropdown-item">
+            {{ video.title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content">
+    <video id="videoPlayer" controls disablepictureinpicture>
+      <source *ngFor="let video of videos" [src]="video.path" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="notes-container">
+      <h3 id="notesTitle">Chapter 1 Notes</h3>
+      <iframe id="notesFrame" src="https://example.com/notes1.pdf"></iframe>
+    </div>
+  </main>

@@ -6,10 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { CourseListComponent} from "./course-list/course-list.component"
 import {PaymentComponent} from "./payment/payment.component"
 import {CourseGotComponent} from "./course-got/course-got.component"
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { MainVideoComponent } from './main-video/main-video.component';
-import { RowListComponentComponent } from './row-list-component/row-list-component.component';
+import { AsideComponent } from './aside/aside.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -19,8 +16,5 @@ export const routes: Routes = [
     {path : 'course' , component:CourseListComponent},
     { path: 'payment', component: PaymentComponent },
     { path: 'gotCourse', component: CourseGotComponent },
-    {path :"play" ,component:MainVideoComponent},
-    {path :"notes" ,component:RowListComponentComponent },
-    
-  // { path: '**', component: NotFoundComponentComponent }
+    {path :"play" ,component:AsideComponent},
 ];

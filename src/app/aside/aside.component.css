@@ -1,0 +1,141 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; /* Ensure full viewport height */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+.sidebar {
+    width: 20%;
+    min-width: 250px; /* Minimum width for sidebar */
+    max-width: 300px; /* Maximum width for sidebar */
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds sidebar height */
+    transition: all 0.3s ease; /* Smooth transition for width changes */
+    border-right: 1px solid #ccc; /* Separator line */
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.chapter {
+    margin-bottom: 15px;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.chapter-title {
+    cursor: pointer;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.chapter-title:hover {
+    color: #007bff; /* Change color on hover for better interactivity */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%; /* Full width dropdown */
+    left: 0; /* Align with parent left */
+    top: 100%; /* Position below parent */
+}
+
+.chapter:hover .dropdown-content {
+    display: block; /* Show dropdown content only on hover */
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #555;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.dropdown-item:hover {
+    background-color: #f9f9f9;
+}
+
+.main-content {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.notes-container {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 400px; /* Example height */
+    border: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: auto; /* Remove minimum width for full-width sidebar */
+        max-width: 100%; /* Ensure sidebar takes full width */
+        padding: 15px; /* Adjusted padding for smaller screens */
+        height: auto;
+        border-right: none; /* Remove border on smaller screens */
+    }
+
+    .sidebar h2 {
+        font-size: 1.3rem; /* Adjusted font size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .chapter-title {
+        padding: 8px 0; /* Adjusted padding for smaller screens */
+    }
+
+    .dropdown-content {
+        position: static; /* Static position for dropdown on smaller screens */
+        display: block; /* Always show dropdown content on smaller screens */
+        width: auto; /* Auto width for dropdown on smaller screens */
+        box-shadow: none; /* Remove box-shadow for dropdown on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 10px; /* Further reduced padding for smallest screens */
+    }
+
+    .main-content {
+        padding: 15px; /* Adjusted padding for smaller screens */
+    }
+
+    iframe {
+        height: 300px; /* height adjustment for smaller screens */
+    }
+}
