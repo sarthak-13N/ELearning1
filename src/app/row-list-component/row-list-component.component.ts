@@ -4,12 +4,13 @@ import { NoteService } from '../note-display-component/note.service';
 import { CommonModule } from '@angular/common';
 import { Router,RouterLink, RouterModule } from '@angular/router';
 import { Row } from '../note-display-component/note.model';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 
 @Component({
   selector: 'app-row-list-component',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterModule,NoteDisplayComponent],
+  imports: [CommonModule,RouterLink,RouterModule,NoteDisplayComponent,SidebarComponent],
   templateUrl: './row-list-component.component.html',
   styleUrl: './row-list-component.component.css'
 })

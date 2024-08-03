@@ -20,9 +20,7 @@ export const routes: Routes = [
     { path: 'payment', component: PaymentComponent },
     { path: 'gotCourse', component: CourseGotComponent },
     {path :"play" ,component:MainVideoComponent},
-    {
-      path :"notes" ,component:RowListComponentComponent
-    }
+    {path :"notes" ,component:RowListComponentComponent },
     
   // { path: '**', component: NotFoundComponentComponent }
 ];
