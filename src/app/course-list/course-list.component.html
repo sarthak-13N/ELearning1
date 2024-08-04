@@ -1,11 +1,23 @@
 <div class="course-list">
-    <div class="course-card" *ngFor="let course of courses">
-      <img [src]="course.imageUrl" alt="{{course.name}}">
-      <h2>{{course.name}}</h2>
-      <p>{{course.description}}</p>
-      <p class="price">${{course.price}}</p>
-      <button routerLink="/payment" >Buy Now</button>
-    </div>
+  <div class="course-card" *ngFor="let course of courses">
+    <img [src]="course.imageUrl" alt="{{course.name}}">
+    <h2>{{course.name}}</h2>
+    <p>{{course.description}}</p>
+    <p class="price">${{course.price}}</p>
+    <button routerLink="/payment">Buy Now</button>
+    <button (click)="openCourseInfo(course)">Info</button>
   </div>
+</div>
 
-  
+<ng-template #courseInfoTemplate let-modal>
+  <h2>{{ selectedCourse?.name }}</h2>
+  <p>{{ selectedCourse?.description }}</p>
+  <h3>Modules:</h3>
+  <ul>
+    <li *ngFor="let module of selectedCourse?.modules">
+      <h4>{{ module.title }}</h4>
+      <p>{{ module.description }}</p>
+    </li>
+  </ul>
+  <button (click)="modal.close()">Close</button>
+</ng-template>
