@@ -1,12 +1,12 @@
 import { Component, OnInit,TemplateRef, ViewChild  } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { Router,RouterLink, RouterModule } from '@angular/router';
 import { CourseService, Course } from './course.service';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-course-list',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterModule],
+  imports: [CommonModule,RouterLink,RouterModule,NgFor],
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css']
 })
@@ -26,7 +26,6 @@ export class CourseListComponent implements OnInit {
         { title: 'Functions', description: 'Understanding functions' }
       ]
     },
-    // Add more courses here
   ];
   
   selectedCourse: any;
