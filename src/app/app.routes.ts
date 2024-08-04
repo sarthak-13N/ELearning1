@@ -7,6 +7,7 @@ import { CourseListComponent} from "./course-list/course-list.component"
 import {PaymentComponent} from "./payment/payment.component"
 import {CourseGotComponent} from "./course-got/course-got.component"
 import { AsideComponent } from './aside/aside.component';
+import { StudentProfileComponent } from './student-profile/student-profile.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,4 +18,5 @@ export const routes: Routes = [
     { path: 'payment', component: PaymentComponent },
     { path: 'gotCourse', component: CourseGotComponent },
     {path :"play" ,component:AsideComponent},
+    {path:"profile",component:StudentProfileComponent}
 ];

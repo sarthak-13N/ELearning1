@@ -1,0 +1,23 @@
+<div *ngIf="student" class="profile-container">
+    <img [src]="student.image" alt="Profile Picture">
+    <h2>{{ student.username }}</h2>
+    <input type="file" (change)="onImageChange($event)">
+  
+    <h3>Purchased Courses</h3>
+    <ul>
+      <li *ngFor="let course of student.purchasedCourses">
+        <img [src]="course.image" alt="{{ course.title }}">
+        <span>{{ course.title }} - {{ course.completion }}% complete</span>
+      </li>
+    </ul>
+  
+    <h3>Recommended Courses</h3>
+    <ul>
+      <li *ngFor="let course of recommendedCourses">
+        <img [src]="course.image" alt="{{ course.title }}">
+        <span>{{ course.title }}</span>
+        <button (click)="purchaseCourse(course)">Purchase</button>
+      </li>
+    </ul>
+  </div>
+  

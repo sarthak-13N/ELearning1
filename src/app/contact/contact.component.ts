@@ -25,7 +25,5 @@ export class ContactComponent {
       subject: this.subject,
       message: this.message
     };
-
-   
   }
 }
